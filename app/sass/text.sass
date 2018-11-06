@@ -1,0 +1,50 @@
+@import "variables"
+@import "type-defaults"
+@import "functions"
+.txt
+  font-family: $font-primary
+
+.txt-footer
+  @extend .txt
+  text-align: center
+  font:
+    size: map-get($footer-font, 'size')
+    weight: map-get($footer-font, 'weight')
+  color:  map-get($footer-font, 'color')
+
+
+.menu01-link
+  @include type-setting(0)
+  color: map-get($header-font, 'color')
+  font:
+    family: $font-primary-bold
+  line-height: 40px
+  &:hover
+    color: white
+
+.txt-h2
+  color: black
+  text-align: left
+  font:
+    family: $font-primary-bold
+    size: map-get($h2-font, 'size')
+    weight: map-get($h2-font, 'weight')
+  line-height: 50px
+
+.txt-h3
+  color: black
+  text-align: left
+  font:
+    family: $font-primary-bold
+    size: map-get($h3-font, 'size')
+    weight: map-get($h3-font, 'weight')
+  line-height: 50px
+
+.txt-standart
+  @include type-setting(0)
+  color: map-get($p-font, 'color')
+  text-align: justify
+  font:
+    family: $font-primary
+    size: map-get($p-font, 'size')
+    weight: map-get($p-font, 'weight')

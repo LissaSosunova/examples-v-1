@@ -1,0 +1,75 @@
+@import "../../../../sass/variables"
+@import "../../../../sass/type-defaults"
+@import "../../../../sass/functions"
+
+.keyboard
+  display: flex
+  margin: 10px
+  padding: 10px
+  height: 280px
+  width: 600px
+  background: #ebf3ee
+  border: 1px solid black
+  border-radius: 5px
+  position: fixed
+  left: 10px
+  bottom: 40px
+  align-items: center
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  transition: .2s
+
+.keyboard .key
+  background-color: black
+  border: 1px solid black
+  border-radius: 5px
+  font:
+    family: $font-primary
+  text-align: center
+  font-size: 13px
+  font-weight: 500
+  text-transform: uppercase
+  color: white
+  margin: 2px
+  padding: 10px
+  min-width: 20px
+  &:hover
+    background-color: #9884F3
+    border: 1px solid black
+    color: white
+    cursor: pointer
+
+
+
+.row-keyboard
+  display: flex
+  align-items: baseline
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+
+
+.select
+  background: #9884F3
+  border: 1px solid black
+  border-radius: 5px
+  font:
+    family: $font-primary
+  text-align: center
+  font-size: 14px
+  font-weight: 400
+  text-transform: uppercase
+  color: #fff8e0
+  margin: 2px
+  padding: 10px
+  min-width: 40px
+
+.select-div
+  position: absolute
+  top: 30px
+  right: 3px
+
+.inputKeyboard
+  text-transform: lowercase

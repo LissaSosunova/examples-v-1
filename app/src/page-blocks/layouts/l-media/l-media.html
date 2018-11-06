@@ -1,0 +1,37 @@
+<div class="col-xs-12
+            col-sm-12
+            col-md-9
+            col-lg-9
+            video-block-01
+            preview-video-container"
+     ng-repeat="item in model">
+    <div class="col-xs-8
+                col-sm-8
+                col-md-9
+                col-lg-9
+                video-block-01">
+        <vimeo vid={{item.id}} width="600" height="360" frameborder="0"></vimeo>
+        <br>
+
+    </div>
+    <div class="col-xs-3
+                col-sm-3
+                col-md-3
+                col-lg-3
+                btn-block">
+        <label class="heading-3">{{item.title}}</label>
+        <ul class="preview-list">
+            <li class="preview-item">
+                <div class="preview-value"><a href="https://vimeo.com" class="preview-video-value">VIMEO</a></div>
+                <div class="preview-text"><a ng-href="{{item.url}}">Original Link</a></div>
+            </li>
+            <li class="preview-item">
+                <div class="preview-value">FROM</div>
+                <div class="preview-text"><a ng-href="{{item.authorLink}}">{{item.authorName}}</a></div>
+            </li>
+        </ul>
+       <div>
+            <button class="btn-read" ng-click="addFav(item)"><i class="fa fa-heart" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>

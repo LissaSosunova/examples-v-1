@@ -1,0 +1,34 @@
+{
+  "user": {
+    "id": "004",
+    "name": "Marry Doe 4",
+    "token": "004",
+    "contacts": [
+      {
+        "id": "002"
+      },
+      {
+        "id": "003"
+      },
+      {
+        "id": "001"
+      }
+    ],
+    "events": [
+      {
+        "id": "001"
+      },
+      {
+        "id": "002"
+      },
+      {
+        "id": "003"
+      }
+    ],
+    "chats": [
+      "001",
+      "002"
+    ],
+    "avatar": "./mock/api/users/004/photo_user.jpg"
+  }
+}

@@ -1,0 +1,57 @@
+@import "variables"
+@import "type-defaults"
+@import "functions"
+.inputs
+  display: inline-block
+  width: 250px
+  resize: none
+  background-color: map-get($btn-submit, 'bg')
+  border: none
+  margin: 10px
+  padding: 10px
+  color: map-get($btn-submit, 'color')
+
+.textarea
+  @extend .inputs
+  height: 120px
+
+.number
+  @extend .inputs
+  height: 18px
+  width: 50px
+
+.input-checkbox + span
+  color: black
+  font-family: Verdana, sans-serif
+  text-align: center
+  font-size: 15px
+  font-weight: 500
+  margin: 5px
+
+.input-checkbox:checked + span
+  background-color: black
+  color: #f0f0f0
+  font-family: Verdana, sans-serif
+  text-align: center
+  font-size: 15px
+  font-weight: 500
+  margin: 5px
+
+
+.input-radio + span
+  background-color: #fefff8
+  color: black
+  font-family: Verdana, sans-serif
+  text-align: center
+  font-size: 15px
+  font-weight: 500
+  margin: 5px
+
+.input-radio:checked + span
+  background-color: black
+  color: #f0f0f0
+  font-family: Verdana, sans-serif
+  text-align: center
+  font-size: 15px
+  font-weight: 500
+  margin: 5px

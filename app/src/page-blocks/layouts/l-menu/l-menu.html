@@ -1,0 +1,19 @@
+<div class="around-xs
+            top-menu-bar">
+    <div class=" row
+                    start-xs
+                    between-xs
+                    menu01
+                    col-xs-4
+                    col-sm-4
+                    col-md-2
+                    col-lg-2"
+         ng-repeat = "item in menu"
+         ng-click="goTo(item.ref)">
+        <div class="col-xs-4
+                    img-menu-position">
+            <img class="img-menu" data-ng-src="{{item.img}}"></div>
+        <div class="col-xs-8"> <span>{{ item.name }}</span></div>
+
+    </div>
+</div>

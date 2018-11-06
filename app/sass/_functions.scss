@@ -1,0 +1,41 @@
+@import "type-defaults";
+
+@mixin set-image($map, $key){
+  background-image: map-get($map, $key);
+};
+
+@mixin set-border($border-size, $border-radius){
+  border: $border-size;
+  border-radius: $border-radius;
+};
+
+@mixin set-transparent($map, $name, $value){
+  background-color: transparentize(map-get($map, $name), $value)
+};
+
+@mixin color-light($map, $name, $value){
+  background-color: lighten(map-get($map, $name), $value);
+};
+
+@mixin color-dark($map, $name, $value){
+  background-color: darken(map-get($map, $name), $value);
+};
+
+@function type-scale($level) {
+  @return map-get(
+                  map-get($type-settings, $level), 'font-size');
+};
+
+@function line-height($level) {
+  @return map-get(
+                  map-get($type-settings, $level), 'line-height');
+};
+
+@mixin type-setting($level) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+};
+
+@function color($name) {
+  @return map-get($colors, $name);
+};

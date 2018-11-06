@@ -1,0 +1,8 @@
+<div class="">
+    <ul ng-repeat="item in favList">
+        <li>
+            <div ng-attr-id="{{item.id}}">{{item.name}}, {{item.author}} <button class="btn-delete-fav" ng-click="deleteItem(item.id)"><i class="fa fa-remove" aria-hidden="true"></i></button></div>
+        </li>
+    </ul>
+    <button class="btn-delete-fav favor-btn-close-div" ng-click="hideDiv()"><i class="fa fa-remove" aria-hidden="true"></i></button>
+</div>

@@ -1,0 +1,75 @@
+@font-face{
+        font-family: Raleway;
+        src: local("Raleway"), url(../../app/fonts/Raleway-Regular.ttf)
+};
+@font-face{
+        font-family: Raleway-black;
+        src: local("Raleway-black"), url(../../app/fonts/Raleway-Black.ttf)
+};
+@font-face{
+        font-family: Raleway-bold;
+        src: local("Raleway-bold"), url(../../app/fonts/Raleway-Bold.ttf)
+};
+@font-face{
+        font-family: Raleway-light;
+        src: local("Raleway-thin"), url(../../app/fonts/Raleway-Light.ttf)
+};
+
+$font-primary: Raleway;
+$font-primary-black: Raleway-black;
+$font-primary-bold: Raleway-bold;
+$font-primary-light: Raleway-light;
+
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+$type-settings: (
+        -1: (
+                font-size: 0.5rem,
+                line-height: $base-line-height
+        ),
+        0: (
+                font-size: 0.75rem,
+                line-height: $base-line-height
+        ),
+        1: (
+                font-size: 1rem,
+                line-height: $base-line-height * 2
+        ),
+        2: (
+                font-size: 1.25rem,
+                line-height: $base-line-height * 2
+        )
+);
+
+
+$btn-font: (
+        'size': 13px,
+        'weight': 500
+);
+$p-font: (
+        'size': 16px,
+        'weight': 200,
+        'color': black
+);
+$header-font: (
+        'size': 18px,
+        'weight': bold,
+        'color': #514e4e
+);
+$footer-font: (
+        'size': 12px,
+        'weight': bold,
+        'color': #fefff8
+);
+$h2-font: (
+        'size': 16px,
+        'weight': 500,
+        'color': #514e4e
+);
+
+$h3-font: (
+        'size': 14px,
+        'weight': 300,
+        'color': #514e4e
+);

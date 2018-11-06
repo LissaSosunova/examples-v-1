@@ -1,0 +1,38 @@
+@import "../../../../sass/variables"
+@import "../../../../sass/functions"
+@import "../../../../sass/type-defaults"
+.menu01
+  @include type-setting(0)
+  color: black
+  background-color: white
+  font:
+    family: $font-primary-bold
+  display: inline-flex
+  justify-content: flex-start
+  border-left: 0
+  border-right: solid 1px black
+  border-bottom: solid 1px black
+  padding-right: 15px
+  content-wrap: no wrap
+  line-height: 40px
+  &:hover
+    background-color: map-get($colors, 'blue')
+    cursor: pointer
+    color: white
+
+.top-menu-bar
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  padding-left: 2px
+  background-color: black
+  align-items: center
+  width: 100%
+  height: auto
+  justify-content: center
+
+.img-menu-position
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  justify-content: flex-start

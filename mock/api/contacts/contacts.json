@@ -1,0 +1,21 @@
+{
+  "data":
+    {
+      "name": {
+        "label": "Меня зовут: ",
+        "content": "My Name"
+      },
+      "mail": {
+        "label": "Мой e-mail: ",
+        "content": "mail@gmail.com"
+      },
+      "phone": {
+        "label": "Телефон: ",
+        "content": "+380 067 000 00 00, +380 067 000 00 00"
+      },
+      "post": {
+        "label": "Адрес: ",
+        "content": "Kiev, UA"
+      }
+    }
+}

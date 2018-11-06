@@ -1,0 +1,22 @@
+<div ng-controller="l-flow.menu" class="row col-xs-12">
+    <div class="row
+            around-xs
+            top-menu-bar">
+        <div class=" row
+                    start-xs
+                    between-xs
+                 menu01
+                col-xs-2
+                col-sm-2
+                col-md-2
+                col-lg-2"
+             ng-repeat = "item in menu"
+             ng-click="goTo(item.ref)">
+            <div class="col-xs-4
+                    img-menu-position">
+                <img class="img-menu" data-ng-src="{{item.img}}"></div>
+            <div class="col-xs-8"> <span>{{ item.name }}</span></div>
+
+        </div>
+    </div>
+</div>

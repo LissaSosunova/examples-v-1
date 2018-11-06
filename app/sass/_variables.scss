@@ -1,0 +1,44 @@
+$btn-submit: (
+        'bg': black,
+        'border': 1px solid #c0c0c0,
+        'color': #fefff8,
+        'h-bg': #c0c0c0,
+        'h-border': 1px solid black,
+        'h-color': black
+);
+$btn-cancel: (
+        'bg': #ff9199,
+        'border': 1px solid #c0c0c0,
+        'color': black,
+        'h-bg': #f32837,
+        'h-border': 1px solid black,
+        'h-color': black
+);
+$bg-color: (
+        'primary': white,
+        'secondary': #f2f2f2,
+        'invert': black
+);
+$colors: (
+        'primary': black,
+        'background': #e1e1e1,
+        'red': #f32837,
+        'gray': #D6D4DC,
+        'border': #ccc,
+        'blue': #9884F3
+);
+
+$btn-round: (
+        'bg': black,
+        'font-size': 15px,
+        'color': #fefff8,
+        'h-bg': #c0c0c0,
+        'h-border': 1px solid black,
+        'h-color': black
+);
+
+$container-width: 750px;
+$container-height: 440px;
+$footer-height: 40px;
+$header-height: 217px;
+$menu-height: 66px;

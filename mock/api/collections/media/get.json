@@ -1,0 +1,23 @@
+[
+  {
+    "id": 20001,
+    "name": "Panda 1",
+    "section": "Няшки",
+    "calculus": "шт.",
+    "price": "10"
+  },
+  {
+    "id": 20002,
+    "name": "Panda 1",
+    "section": "Сарказм",
+    "calculus": "шт.",
+    "price": "10"
+  },
+  {
+    "id": 20003,
+    "name": "Panda 1",
+    "section": "Романтические",
+    "calculus": "шт.",
+    "price": "10"
+  }
+]
