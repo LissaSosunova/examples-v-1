@@ -31,6 +31,7 @@
   width: 22px
   font-size: 10px
   margin: 1px
+  padding: 2px
   &:hover
     background-color: black
     border: map-get($btn-round, 'h-border')
@@ -89,13 +90,27 @@
   background-color:  map-get($btn-cancel, 'bg')
   color: map-get($colors, 'primary')
 
+.btn-read-sm
+  @extend .button-round-xs
+  background-color:  map-get($btn-cancel, 'bg')
+  color: map-get($colors, 'primary')
+
 .btn-later
   @extend .button-round
+  background-color: map-get($colors, 'gray')
+  color: black
+.btn-later-sm
+  @extend .button-round-xs
   background-color: map-get($colors, 'gray')
   color: black
 
 .btn-download
   @extend .button-round
+  background-color: map-get($colors, 'blue')
+  color: black
+
+.btn-download-sm
+  @extend .button-round-xs
   background-color: map-get($colors, 'blue')
   color: black
 
