@@ -693,7 +693,7 @@ app.controller('l-flow.menu', function($scope, $http, $state) {
                     ]
                 },
                 {
-                    name: "AngularJS",
+                    name: "Additionally",
                     section: "",
                     img: "app/images/menu/menu_item_05.png",
                     alt: "Templates",
