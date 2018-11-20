@@ -45,8 +45,10 @@ var createHandlers = {
 
 function createCheckbox(elementSource) {
     var div = document.createElement('div');
+    div.classList.add('removable');
     var input = document.createElement('input');
     var span = document.createElement('span');
+    span.classList.add('removable');
     input.type = elementSource.type;
     input.id = elementSource.id;
     input.className = elementSource.class;
@@ -63,13 +65,12 @@ function renderElement(options) {
     var element = createHandlers[options.elementSource.tagName](options.elementSource);
 
     options.target.appendChild(element);
+    element.classList.add('removable');
     options.target.appendChild(br);
 }
 
 function defaulElementConstructor(source, data) {
     var element = document.createElement(source.tagName);
-    console.log(data);
-
     return element;
 }
 

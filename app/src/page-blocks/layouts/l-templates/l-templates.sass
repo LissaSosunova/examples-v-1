@@ -48,3 +48,67 @@
 .preview-content-messages
   flex-direction: column
   margin-left: 40px
+
+.block-with-animation
+  display: flex
+  align-items: center
+  justify-content: center
+  color: white
+  font-size: 16px
+  background-color: map-get($colors, 'blue')
+  height: 80px
+  width: 80px
+  margin: 15px
+  -webkit-transition: all 0.3s ease
+  -moz-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+
+.rotate:hover
+  -webkit-transform: rotateZ(20deg)
+  -ms-transform: rotateZ(20deg)
+  transform: rotateZ(20deg)
+
+.to-circle:hover
+  border-radius: 50%
+  background-color: map-get($colors, 'red')
+
+.move-up:hover
+  opacity: 0.1
+  -webkit-transform: translate(0,-50px)
+  -moz-transform: translate(0,-50px)
+  -o-transform: translate(0,-50px)
+
+.move-down:hover
+  opacity: 0.1
+  -webkit-transform: translate(0,50px)
+  -moz-transform: translate(0,50px)
+  -o-transform: translate(0,50px)
+
+.move-down-and-big:hover
+  font-size: 20px
+  z-index: 100
+  -webkit-transform: scale(1.7)
+  -ms-transform: scale(1.7)
+  transform: scale(1.7)
+
+.move-up-and-small:hover
+  font-size: 10px
+  -webkit-transform: scale(0.7)
+  -ms-transform: scale(0.7)
+  transform: scale(0.7)
+
+.add-border:hover
+  box-shadow: inset 0 0 0 10px map-get($colors, 'red')
+  font-size: 10px
+
+.rotate-text
+  -webkit-transition: all 0.7s ease
+  -moz-transition: all 0.7s ease
+  -o-transition: all 0.7s ease
+  transition: all 0.7s ease
+  &:hover
+    -webkit-transform: rotateZ(180deg)
+    -ms-transform: rotateZ(180deg)
+    transform: rotateZ(180deg)
