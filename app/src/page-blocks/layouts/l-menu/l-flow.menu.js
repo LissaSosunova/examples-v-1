@@ -17,52 +17,31 @@ app.controller('l-flow.menu', function($scope, $http, $state) {
         //     });
 
         $scope.menu = [
+                // {
+                //     name: "Книги",
+                //     section: "Рассказы",
+                //     img: "app/images/menu/menu_item_01.png",
+                //     alt: "Books",
+                //     ref: "books",
+                //     testArr: [
+                //         "001",
+                //         "005"
+                //     ]
+                // },
+
+                // {
+                //     name: "Контакты",
+                //     section: "",
+                //     img: "app/images/menu/menu_item_03.png",
+                //     alt: "Contacts",
+                //     ref: "contacts"
+                // },
                 {
-                    name: "Книги",
-                    section: "Рассказы",
-                    img: "app/images/menu/menu_item_01.png",
-                    alt: "Books",
-                    ref: "books",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Media",
-                    section: "Video",
-                    img: "app/images/menu/menu_item_02.png",
-                    alt: "Media",
-                    ref: "media",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Контакты",
-                    section: "",
-                    img: "app/images/menu/menu_item_03.png",
-                    alt: "Contacts",
-                    ref: "contacts"
-                },
-                {
-                    name: "О проекте",
+                    name: "About project",
                     section: "",
                     img: "app/images/menu/menu_item_04.png",
                     alt: "About us",
                     ref: "about",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Additionally",
-                    section: "",
-                    img: "app/images/menu/menu_item_05.png",
-                    alt: "Templates",
-                    ref: "templates",
                     testArr: [
                         "001",
                         "005"
@@ -74,6 +53,28 @@ app.controller('l-flow.menu', function($scope, $http, $state) {
                     img: "app/images/menu/menu_item_06.png",
                     alt: "JavaScript",
                     ref: "jscr",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "Extras",
+                    section: "",
+                    img: "app/images/menu/menu_item_05.png",
+                    alt: "Templates",
+                    ref: "templates",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "Media",
+                    section: "Video",
+                    img: "app/images/menu/menu_item_02.png",
+                    alt: "Media",
+                    ref: "media",
                     testArr: [
                         "001",
                         "005"

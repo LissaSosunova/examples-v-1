@@ -5,7 +5,7 @@ var inputsData = {
                 title: "Name",
                 type: "text",
                 placeholder: "Name",
-                class: "inputs",
+                class: "inputs removable",
                 id: "01",
                 value: null,
                 required: true,
@@ -15,7 +15,7 @@ var inputsData = {
                 title: "Email",
                 type: "email",
                 placeholder: "e-mail",
-                class: "inputs",
+                class: "inputs removable",
                 id: "02",
                 value: null,
                 required: true,
@@ -25,7 +25,7 @@ var inputsData = {
                 title: "Text",
                 type: "text",
                 placeholder: "Text",
-                class: "textarea",
+                class: "textarea removable",
                 id: "03",
                 value: null,
                 required: false,
@@ -35,7 +35,7 @@ var inputsData = {
                 title: "checkbox_1",
                 type: "checkbox",
                 placeholder: "select it",
-                class: "input-checkbox",
+                class: "input-checkbox removable",
                 id: "04",
                 value: "select it",
                 required: false,
@@ -46,7 +46,7 @@ var inputsData = {
             {
                 title: "button1",
                 type: "button",
-                class: "submit",
+                class: "submit removable",
                 id: "btnOK",
                 innerHTML: "OK",
                 tagName: "button",
@@ -70,7 +70,7 @@ var inputsData = {
             {
                 title: "button2",
                 type: "button",
-                class: "cancel",
+                class: "cancel removable",
                 id: "btnCancel",
                 innerHTML: "CANCEL",
                 tagName: "button",
@@ -79,10 +79,11 @@ var inputsData = {
                     name: 'cancel'
                 },
                 goAhead: function () {
-                    var fields = document.querySelectorAll('input');
+                    var fields = document.querySelectorAll('.removable');
+                    console.log('do');
                     fields.forEach(function (item) {
                         if(!(item.value === "DO it")){
-                            item.value = '';
+                            item.remove();
                         }
 
                     });

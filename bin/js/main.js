@@ -295,22 +295,6 @@ app.factory('$transferService', function(){
 
     return obj;
 });
-app.directive("mainMenu", function () {
-    return {
-        link: function ($scope, element, attrs) {
-            console.log($scope, element, attrs);
-
-
-            $scope.message += " Directive changes";
-
-            // $scope.$parent.message += '_1'
-        },
-        restrict: "EA",
-        templateUrl: 'app/js/directives/main-menu/main-menu.html',
-        // replace: true,
-        scope: true
-    }
-});
 app.directive("favoritesList", function () {
     return {
         restrict: "A",
@@ -345,6 +329,22 @@ app.directive("favoritesList", function () {
         }
     }
 });
+app.directive("mainMenu", function () {
+    return {
+        link: function ($scope, element, attrs) {
+            console.log($scope, element, attrs);
+
+
+            $scope.message += " Directive changes";
+
+            // $scope.$parent.message += '_1'
+        },
+        restrict: "EA",
+        templateUrl: 'app/js/directives/main-menu/main-menu.html',
+        // replace: true,
+        scope: true
+    }
+});
 app.directive('vimeo', function() {
     return {
         restrict: 'E',
@@ -358,59 +358,6 @@ app.directive('vimeo', function() {
             element.attr('src', url);
         }
     };
-});
-app.controller("l-flow.about", function ($scope, $state, $flowDataAbout) {
-    $scope.about = {};
-
-    function init() {
-        // $scope.getInfoAbout = function () {
-        //     $flowDataAbout.getData()
-        //         .then(response => {
-        //                 $scope.about = response.paragraph;
-        //             },
-        //             error => $scope.errorMessage = error);
-        // } ;
-
-        var a = {
-            title: "Идея проекта.",
-            description: "Этот ресурс предназначен для людей, которые не любят скучать. Если вы едете в транспорте, сидите в очереди или просто ненавидите скуку, то вам достаточно иметь устройство с доступом в Интернет и наушники. Наушники скорее для того, что бы не смущать людей, которые вместе с вами коротают это время. Откройте нужный раздел, выберите интересующую вас аудио-книгу или веселое видео и просто нажмите \"play\".",
-            platform: "Angular JS",
-            technologies:
-                [
-                    {
-                        title: "AngularJS",
-                        descr: "ui-router, resource"
-                    },
-                    {
-                        title: "JavaScript",
-                        descr: "ecmascript 6"
-                    },
-                    {
-                        title: "MOCK",
-                        descr: "Server"
-                    },
-                    {
-                        title: "npm",
-                        descr: "node-static, express, fs, body-parser"
-                    },
-                    {
-                        title: "Gulp",
-                        descr: "Development"
-                    },
-                    {
-                        title: "CSS",
-                        descr: "Grids, Font Awesome"
-                    },
-                    {
-                        title: "SASS",
-                        descr: "Variables, mixins, functions, type-default, styles"
-                    }
-                ]
-        }
-        $scope.about = a;
-    }
-    init();
-
 });
 app.controller("l-books", function ($scope, $flowDataBooks,  $state) {
     $scope.books = {
@@ -473,7 +420,7 @@ app.controller('l-flow', function($scope, $state) {
 app.controller('l-footer', function($scope, $state) {
     $scope.model = {
         content: {
-            title: "Проект \"Параграф\" по курсу \"FrontendPRO 2017г.\""
+            title: "Alisa Sosunova. E-mail: lissasosunova@gmail.com"
         }
     };
 });
@@ -633,96 +580,6 @@ app.controller('l-media', function($scope, $state) {
     };
 
 });
-app.controller('l-flow.menu', function($scope, $http, $state) {
-    $scope.flow = $scope.flow || {};
-
-    $scope.menu = {
-        menu: []
-    };
-    function init() {
-        // $http({
-        //     method: 'GET',
-        //     url: 'http://localhost:5005/menu'
-        // })
-        //     .then(function success(response) {
-        //         $scope.menu = response.data.menu;
-        //         for(let i=0; i<$scope.menu.length; i++){
-        //             // console.log($scope.menu[i].name);
-        //         }
-        //     });
-
-        $scope.menu = [
-                {
-                    name: "Книги",
-                    section: "Рассказы",
-                    img: "app/images/menu/menu_item_01.png",
-                    alt: "Books",
-                    ref: "books",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Media",
-                    section: "Video",
-                    img: "app/images/menu/menu_item_02.png",
-                    alt: "Media",
-                    ref: "media",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Контакты",
-                    section: "",
-                    img: "app/images/menu/menu_item_03.png",
-                    alt: "Contacts",
-                    ref: "contacts"
-                },
-                {
-                    name: "О проекте",
-                    section: "",
-                    img: "app/images/menu/menu_item_04.png",
-                    alt: "About us",
-                    ref: "about",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Additionally",
-                    section: "",
-                    img: "app/images/menu/menu_item_05.png",
-                    alt: "Templates",
-                    ref: "templates",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "JavaScript",
-                    section: "",
-                    img: "app/images/menu/menu_item_06.png",
-                    alt: "JavaScript",
-                    ref: "jscr",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                }
-            ]
-
-    }
-
-    init();
-    $scope.goTo = function (info) {
-        $state.go(info);
-    }
-});
 app.controller("l-flow.templates", function ($scope, $flowDataUser, $flowDataChat, $state, $interval) {
     $scope.templates = {
         templates: []
@@ -850,6 +707,134 @@ app.controller("l-flow.templates", function ($scope, $flowDataUser, $flowDataCha
     init();
 
 });
+app.controller('l-flow.menu', function($scope, $http, $state) {
+    $scope.flow = $scope.flow || {};
+
+    $scope.menu = {
+        menu: []
+    };
+    function init() {
+        // $http({
+        //     method: 'GET',
+        //     url: 'http://localhost:5005/menu'
+        // })
+        //     .then(function success(response) {
+        //         $scope.menu = response.data.menu;
+        //         for(let i=0; i<$scope.menu.length; i++){
+        //             // console.log($scope.menu[i].name);
+        //         }
+        //     });
+
+        $scope.menu = [
+                // {
+                //     name: "Книги",
+                //     section: "Рассказы",
+                //     img: "app/images/menu/menu_item_01.png",
+                //     alt: "Books",
+                //     ref: "books",
+                //     testArr: [
+                //         "001",
+                //         "005"
+                //     ]
+                // },
+
+                // {
+                //     name: "Контакты",
+                //     section: "",
+                //     img: "app/images/menu/menu_item_03.png",
+                //     alt: "Contacts",
+                //     ref: "contacts"
+                // },
+                {
+                    name: "About project",
+                    section: "",
+                    img: "app/images/menu/menu_item_04.png",
+                    alt: "About us",
+                    ref: "about",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "JavaScript",
+                    section: "",
+                    img: "app/images/menu/menu_item_06.png",
+                    alt: "JavaScript",
+                    ref: "jscr",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "Extras",
+                    section: "",
+                    img: "app/images/menu/menu_item_05.png",
+                    alt: "Templates",
+                    ref: "templates",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "Media",
+                    section: "Video",
+                    img: "app/images/menu/menu_item_02.png",
+                    alt: "Media",
+                    ref: "media",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                }
+            ]
+
+    }
+
+    init();
+    $scope.goTo = function (info) {
+        $state.go(info);
+    }
+});
+app.controller("l-flow.about", function ($scope, $state, $flowDataAbout) {
+    $scope.about = {};
+
+    function init() {
+        var a = {
+            title: "Examples",
+            description: "This project presents examples of frontend skills. 'JavaScript': creating elements on the page using only JS.  'Extras': examples of animation of the SVG, animation of simple elements on the page by CSS. 'Media': AngularJS directive, which creates blocks on a page from information from external sources.",
+            platform: "Angular JS",
+            technologies:
+                [
+                    {
+                        title: "AngularJS",
+                        descr: "ui-router, resource"
+                    },
+                    {
+                        title: "JavaScript",
+                        descr: "ecmascript 6"
+                    },
+                    {
+                        title: "Gulp",
+                        descr: "Development"
+                    },
+                    {
+                        title: "CSS",
+                        descr: "Grids, Font Awesome"
+                    },
+                    {
+                        title: "SASS",
+                        descr: "Variables, mixins, functions, type-default, styles, animation"
+                    }
+                ]
+        }
+        $scope.about = a;
+    }
+    init();
+
+});
 var inputsData = {
     rows: [
         [
@@ -857,7 +842,7 @@ var inputsData = {
                 title: "Name",
                 type: "text",
                 placeholder: "Name",
-                class: "inputs",
+                class: "inputs removable",
                 id: "01",
                 value: null,
                 required: true,
@@ -867,7 +852,7 @@ var inputsData = {
                 title: "Email",
                 type: "email",
                 placeholder: "e-mail",
-                class: "inputs",
+                class: "inputs removable",
                 id: "02",
                 value: null,
                 required: true,
@@ -877,7 +862,7 @@ var inputsData = {
                 title: "Text",
                 type: "text",
                 placeholder: "Text",
-                class: "textarea",
+                class: "textarea removable",
                 id: "03",
                 value: null,
                 required: false,
@@ -887,7 +872,7 @@ var inputsData = {
                 title: "checkbox_1",
                 type: "checkbox",
                 placeholder: "select it",
-                class: "input-checkbox",
+                class: "input-checkbox removable",
                 id: "04",
                 value: "select it",
                 required: false,
@@ -898,7 +883,7 @@ var inputsData = {
             {
                 title: "button1",
                 type: "button",
-                class: "submit",
+                class: "submit removable",
                 id: "btnOK",
                 innerHTML: "OK",
                 tagName: "button",
@@ -922,7 +907,7 @@ var inputsData = {
             {
                 title: "button2",
                 type: "button",
-                class: "cancel",
+                class: "cancel removable",
                 id: "btnCancel",
                 innerHTML: "CANCEL",
                 tagName: "button",
@@ -931,10 +916,11 @@ var inputsData = {
                     name: 'cancel'
                 },
                 goAhead: function () {
-                    var fields = document.querySelectorAll('input');
+                    var fields = document.querySelectorAll('.removable');
+                    console.log('do');
                     fields.forEach(function (item) {
                         if(!(item.value === "DO it")){
-                            item.value = '';
+                            item.remove();
                         }
 
                     });
@@ -1200,8 +1186,10 @@ var createHandlers = {
 
 function createCheckbox(elementSource) {
     var div = document.createElement('div');
+    div.classList.add('removable');
     var input = document.createElement('input');
     var span = document.createElement('span');
+    span.classList.add('removable');
     input.type = elementSource.type;
     input.id = elementSource.id;
     input.className = elementSource.class;
@@ -1218,13 +1206,12 @@ function renderElement(options) {
     var element = createHandlers[options.elementSource.tagName](options.elementSource);
 
     options.target.appendChild(element);
+    element.classList.add('removable');
     options.target.appendChild(br);
 }
 
 function defaulElementConstructor(source, data) {
     var element = document.createElement(source.tagName);
-    console.log(data);
-
     return element;
 }
 
