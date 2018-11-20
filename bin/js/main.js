@@ -506,6 +506,57 @@ app.controller("l-flow.jscr", function ($scope, $http,  $state, $window) {
 
     }
 });
+app.controller("l-flow.about", function ($scope, $state, $flowDataAbout) {
+    $scope.about = {};
+
+    function init() {
+        var a = {
+            title: "Examples",
+            platform: "Angular JS",
+            technologies:
+                [
+                    {
+                        title: "AngularJS",
+                        descr: "ui-router, resource"
+                    },
+                    {
+                        title: "JavaScript",
+                        descr: "ecmascript 6"
+                    },
+                    {
+                        title: "Gulp",
+                        descr: "Development"
+                    },
+                    {
+                        title: "CSS",
+                        descr: "Grids, Font Awesome"
+                    },
+                    {
+                        title: "SASS",
+                        descr: "Variables, mixins, functions, type-default, styles, animation"
+                    }
+                ],
+            description:
+                [
+                    {
+                        title: "JavaScript",
+                        descr: "creating elements on the page using only JS"
+                    },
+                    {
+                        title: "Extras",
+                        descr: "examples of animation of the SVG, animation of simple elements on the page by CSS"
+                    },
+                    {
+                        title: "Media",
+                        descr: "AngularJS directive, which creates blocks on a page from information from external sources."
+                    }
+                ]
+        }
+        $scope.about = a;
+    }
+    init();
+
+});
 app.controller('l-media', function($scope, $state) {
     $scope.flow = $scope.flow || {};
 
@@ -579,6 +630,97 @@ app.controller('l-media', function($scope, $state) {
         localStorage.setItem(key, JSON.stringify(descr));
     };
 
+});
+app.controller('l-flow.menu', function($scope, $http, $state) {
+    $scope.flow = $scope.flow || {};
+
+    $scope.menu = {
+        menu: []
+    };
+    function init() {
+        // $http({
+        //     method: 'GET',
+        //     url: 'http://localhost:5005/menu'
+        // })
+        //     .then(function success(response) {
+        //         $scope.menu = response.data.menu;
+        //         for(let i=0; i<$scope.menu.length; i++){
+        //             // console.log($scope.menu[i].name);
+        //         }
+        //     });
+
+        $scope.menu = [
+                // {
+                //     name: "Книги",
+                //     section: "Рассказы",
+                //     img: "app/images/menu/menu_item_01.png",
+                //     alt: "Books",
+                //     ref: "books",
+                //     testArr: [
+                //         "001",
+                //         "005"
+                //     ]
+                // },
+
+                // {
+                //     name: "Контакты",
+                //     section: "",
+                //     img: "app/images/menu/menu_item_03.png",
+                //     alt: "Contacts",
+                //     ref: "contacts"
+                // },
+                {
+                    name: "About project",
+                    section: "",
+                    img: "app/images/menu/menu_item_04.png",
+                    alt: "About us",
+                    ref: "about",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "JavaScript",
+                    section: "",
+                    img: "app/images/menu/menu_item_06.png",
+                    alt: "JavaScript",
+                    ref: "jscr",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "Extras",
+                    section: "",
+                    img: "app/images/menu/menu_item_05.png",
+                    alt: "Templates",
+                    ref: "templates",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                },
+                {
+                    name: "Media",
+                    section: "Video",
+                    img: "app/images/menu/menu_item_02.png",
+                    alt: "Media",
+                    ref: "media",
+                    testArr: [
+                        "001",
+                        "005"
+                    ]
+                }
+            ]
+
+    }
+
+    init();
+    $scope.goTo = function (info) {
+        $state.go(info);
+    }
 });
 app.controller("l-flow.templates", function ($scope, $flowDataUser, $flowDataChat, $state, $interval) {
     $scope.templates = {
@@ -704,134 +846,6 @@ app.controller("l-flow.templates", function ($scope, $flowDataUser, $flowDataCha
     };
 
 
-    init();
-
-});
-app.controller('l-flow.menu', function($scope, $http, $state) {
-    $scope.flow = $scope.flow || {};
-
-    $scope.menu = {
-        menu: []
-    };
-    function init() {
-        // $http({
-        //     method: 'GET',
-        //     url: 'http://localhost:5005/menu'
-        // })
-        //     .then(function success(response) {
-        //         $scope.menu = response.data.menu;
-        //         for(let i=0; i<$scope.menu.length; i++){
-        //             // console.log($scope.menu[i].name);
-        //         }
-        //     });
-
-        $scope.menu = [
-                // {
-                //     name: "Книги",
-                //     section: "Рассказы",
-                //     img: "app/images/menu/menu_item_01.png",
-                //     alt: "Books",
-                //     ref: "books",
-                //     testArr: [
-                //         "001",
-                //         "005"
-                //     ]
-                // },
-
-                // {
-                //     name: "Контакты",
-                //     section: "",
-                //     img: "app/images/menu/menu_item_03.png",
-                //     alt: "Contacts",
-                //     ref: "contacts"
-                // },
-                {
-                    name: "About project",
-                    section: "",
-                    img: "app/images/menu/menu_item_04.png",
-                    alt: "About us",
-                    ref: "about",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "JavaScript",
-                    section: "",
-                    img: "app/images/menu/menu_item_06.png",
-                    alt: "JavaScript",
-                    ref: "jscr",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Extras",
-                    section: "",
-                    img: "app/images/menu/menu_item_05.png",
-                    alt: "Templates",
-                    ref: "templates",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                },
-                {
-                    name: "Media",
-                    section: "Video",
-                    img: "app/images/menu/menu_item_02.png",
-                    alt: "Media",
-                    ref: "media",
-                    testArr: [
-                        "001",
-                        "005"
-                    ]
-                }
-            ]
-
-    }
-
-    init();
-    $scope.goTo = function (info) {
-        $state.go(info);
-    }
-});
-app.controller("l-flow.about", function ($scope, $state, $flowDataAbout) {
-    $scope.about = {};
-
-    function init() {
-        var a = {
-            title: "Examples",
-            description: "This project presents examples of frontend skills. 'JavaScript': creating elements on the page using only JS.  'Extras': examples of animation of the SVG, animation of simple elements on the page by CSS. 'Media': AngularJS directive, which creates blocks on a page from information from external sources.",
-            platform: "Angular JS",
-            technologies:
-                [
-                    {
-                        title: "AngularJS",
-                        descr: "ui-router, resource"
-                    },
-                    {
-                        title: "JavaScript",
-                        descr: "ecmascript 6"
-                    },
-                    {
-                        title: "Gulp",
-                        descr: "Development"
-                    },
-                    {
-                        title: "CSS",
-                        descr: "Grids, Font Awesome"
-                    },
-                    {
-                        title: "SASS",
-                        descr: "Variables, mixins, functions, type-default, styles, animation"
-                    }
-                ]
-        }
-        $scope.about = a;
-    }
     init();
 
 });

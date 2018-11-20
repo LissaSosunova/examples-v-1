@@ -3,14 +3,31 @@
             col-md-11
             col-lg-11
             content-inside">
+    <!--<div class="col-xs-12-->
+                <!--col-sm-12-->
+                <!--col-md-5-->
+                <!--col-lg-5-->
+                <!--div-left-side-content">-->
+        <!--<span class="txt-h2">{{ about.title }}</span>-->
+        <!--<br>-->
+        <!--<span class="txt-standart">{{ about.description }}</span>-->
+    <!--</div>-->
     <div class="col-xs-12
                 col-sm-12
-                col-md-5
-                col-lg-5
-                div-left-side-content">
-        <span class="txt-h2">{{ about.title }}</span>
-        <br>
-        <span class="txt-standart">{{ about.description }}</span>
+                col-md-6
+                col-lg-6
+                div-right-side-content">
+        <div class="div-right-side-content">
+            <span class="txt-h2">This project presents examples of frontend skills: </span>
+        </div>
+        <div class="div-right-side-content">
+            <ul class="preview-list tech-block" ng-repeat="item in about.description">
+                <li class="preview-item">
+                    <div class="preview-value">{{ item.title }}</div>
+                    <div class="preview-text">{{ item.descr }}</div>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="col-xs-12
                 col-sm-12
